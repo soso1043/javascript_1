@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h2 id="hello">안녕하세요</h2>
-    <h2 id="hi">올때메로나</h2>
-    
+    <div class="alert-box" id="box">Alert 박스
+    <button onclick="boxClose()">닫기</button>
+    </div>
+    <button onclick="boxOpen()">버튼</button>
     <script>
-        document.getElementById('hello').innerHTML = '안녕';
-        document.getElementById('hi').innerHTML = '올때바밤바';
-        document.getElementById('hi').style.fontSize = '30px';
-        // 주석은 command ? (/)
-        // 
+        function boxOpen(){
+            document.getElementById('box').style.display = 'block';
+        }
+        function boxClose(){
+            document.getElementById('box').style.display = 'none';
+        }
     </script>
 </body>
 </html>
