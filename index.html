@@ -10,7 +10,7 @@
 <body>
     <div class="alert-box" id="box">
         <p id="alertBox">Alert 박스</p>
-    <button onclick="boxOpen('none')">닫기</button>
+        <button id="close">닫기</button>
     </div>
     <button onclick="boxOpen('block', '아이디')">버튼1</button>
     <button onclick="boxOpen('block', '비번')">버튼2</button>
@@ -19,8 +19,10 @@
             document.getElementById('box').style.display = btnShow;
             document.getElementById('alertBox').innerHTML = loginBtn;
         }
-
-
+        
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('box').style.display = 'none';
+        });
     </script>
 </body>
 </html>
