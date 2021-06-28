@@ -8,14 +8,19 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="alert-box" id="box">Alert 박스
+    <div class="alert-box" id="box">
+        <p id="alertBox">Alert 박스</p>
     <button onclick="boxOpen('none')">닫기</button>
     </div>
-    <button onclick="boxOpen('block')">열기</button>
+    <button onclick="boxOpen('block', '아이디')">버튼1</button>
+    <button onclick="boxOpen('block', '비번')">버튼2</button>
     <script>
-        function boxOpen(btnShow){
+        function boxOpen(btnShow, loginBtn){
             document.getElementById('box').style.display = btnShow;
+            document.getElementById('alertBox').innerHTML = loginBtn;
         }
+
+
     </script>
 </body>
 </html>
