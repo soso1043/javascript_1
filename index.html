@@ -5,15 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<!-- javascript -->
     <div class="alert-box" id="box">
         <p id="alertBox">Alert 박스</p>
         <button id="close">닫기</button>
     </div>
     <button onclick="boxOpen('block', '아이디')">버튼1</button>
     <button onclick="boxOpen('block', '비번')">버튼2</button>
+
+
+
+
+<!-- jquery -->
+    <p class="greeting">안녕하세요</p>
+    <p class="greeting">안녕하세요</p>
+    <p class="greeting">안녕하세요</p>
+    <button class="btn">버튼</button>
+    <button class="btn">버튼</button>
+    <button class="btn">버튼</button>
+
+<!-- jquery -->
+    <script>
+        
+        $('.greeting').html('안녕');
+        $('.greeting').eq(0).html('Hi');
+        $('.btn').on('click',function(){
+            $('.greeting').slideToggle();
+        })
+
+    </script>
+
+
+
+
+
+
+<!-- javascript -->
     <script>
         function boxOpen(btnShow, loginBtn){
             document.getElementById('box').style.display = btnShow;
